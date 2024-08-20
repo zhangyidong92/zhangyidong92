@@ -4,8 +4,7 @@ layout: home
 
 hero:
   name: "张同学的学习笔记"
-  text: "学习笔记"
-  tagline: My great project tagline
+  tagline: 好脑子不如烂笔头子
   actions:
     - theme: brand
       text: Markdown Examples
