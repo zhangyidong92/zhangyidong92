@@ -1,29 +1,50 @@
-import { defineConfig } from 'vitepress'
+import { defineConfig,type DefaultTheme } from 'vitepress'
+
+const sidebarQuestion:DefaultTheme.SidebarItem[] = [
+  {
+    text: 'PNPM',
+    items: [{ text: '解决pnpm(ERR_INVALID_THIS)异常', link: '/pnpmNode20' },]
+  }
+]
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   base: '/',
   title: "张同学的学习笔记",
-  description: "学习笔记",
+  description: "",
+  // head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
+  lang: 'zh-CN',
   themeConfig: {
-    // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
+      { text: '首页', link: '/' },
+      { text: '问题汇总', link: '/question/pnpmNode20' }
     ],
-
-    sidebar: [
-      {
-        text: 'Examples',
-        items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
-        ]
-      }
-    ],
-
+    sidebar: { '/question' : {base: '/question', items: sidebarQuestion}},
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
-    ]
+      { icon: 'github', link: 'https://github.com/zhangyidong92/zhangyidong92.github.io' }
+    ],
+    docFooter: {
+      prev: '上一页',
+      next: '下一页'
+    },
+    outline: {
+      label: '页面导航'
+    },
+    lastUpdated: {
+      text: '最后更新于',
+      formatOptions: {
+        dateStyle: 'short',
+        timeStyle: 'medium'
+      }
+    },
+    returnToTopLabel: '回到顶部',
+    sidebarMenuLabel: '菜单',
+    darkModeSwitchLabel: '主题',
+    lightModeSwitchTitle: '切换到浅色模式',
+    darkModeSwitchTitle: '切换到深色模式',
+    footer: {
+      message: 'Released under the MIT License.',
+      copyright: 'Copyright © 2024-present ZhangYiDong'
+    }
   }
 })
