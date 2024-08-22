@@ -33,7 +33,6 @@ pnpm-debug.log*
 
 package-lock.json
 yarn.lock
-TODO.md
 
 docs/.vitepress/cache
 docs/.vitepress/dist

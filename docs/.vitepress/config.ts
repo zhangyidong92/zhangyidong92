@@ -4,6 +4,9 @@ const sidebarQuestion:DefaultTheme.SidebarItem[] = [
   {
     text: 'PNPM',
     items: [{ text: '解决pnpm(ERR_INVALID_THIS)异常', link: '/pnpmNode20' },]
+  }, {
+    text: '待确认问题',
+    items: [{ text: 'Vue mounted生命周期获取元素异常', link: '/todo' }]
   }
 ]
 
