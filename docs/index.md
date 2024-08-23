@@ -5,13 +5,13 @@ layout: home
 hero:
   name: "张同学的学习笔记"
   # tagline: 好脑子不如烂笔头子
-  # actions:
-  #   - theme: brand
-  #     text: Markdown Examples
-  #     link: /markdown-examples
-  #   - theme: alt
-  #     text: API Examples
-  #     link: /api-examples
+  actions:
+    - theme: brand
+      text: 前端开发
+      link: /frontEnd/dom
+    # - theme: alt
+    #   text: API Examples
+    #   link: /api-examples
 
 # features:
 #   - title: Feature A

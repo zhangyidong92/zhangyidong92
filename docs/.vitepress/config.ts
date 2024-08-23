@@ -3,11 +3,19 @@ import { defineConfig,type DefaultTheme } from 'vitepress'
 const sidebarQuestion:DefaultTheme.SidebarItem[] = [
   {
     text: 'PNPM',
-    items: [{ text: '解决pnpm(ERR_INVALID_THIS)异常', link: '/pnpmNode20' },]
-  }, {
+    items: [{ text: '解决pnpm(ERR_INVALID_THIS)异常', link: '/pnpm' },]
+  },
+  {
     text: '待确认问题',
     items: [{ text: 'Vue mounted生命周期获取元素异常', link: '/todo' }]
   }
+]
+
+const sidebarFrontEnd:DefaultTheme.SidebarItem[] = [
+  {
+    text: 'DOM',
+    items: [{ text: 'addEventListener', link: '/dom' },]
+  },
 ]
 
 // https://vitepress.dev/reference/site-config
@@ -20,9 +28,11 @@ export default defineConfig({
   themeConfig: {
     nav: [
       { text: '首页', link: '/' },
-      { text: '问题汇总', link: '/question/pnpmNode20' }
+      { text: '问题汇总', link: '/question/pnpm' }
     ],
-    sidebar: { '/question' : {base: '/question', items: sidebarQuestion}},
+    sidebar: { '/question' : {base: '/question', items: sidebarQuestion}, '/frontEnd' : {
+      base: '/frontEnd', items: sidebarFrontEnd
+    }},
     socialLinks: [
       { icon: 'github', link: 'https://github.com/zhangyidong92/zhangyidong92.github.io' }
     ],
